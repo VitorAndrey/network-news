@@ -1,0 +1,16 @@
+.newsContainer h2 {
+  font-size: 2rem;
+}
+
+.newsContainer h3 {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.newsContainer h4 {
+  font-weight: bold;
+}
+
+.newsContainer a {
+  text-decoration: underline;
+}

@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .spreaded-words {
+    word-spacing: 0.5rem;
+  }
+}
