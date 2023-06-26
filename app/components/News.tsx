@@ -3,7 +3,17 @@ import { PortableText } from "@portabletext/react";
 
 import styles from "../styles/news.module.css";
 
-export default function News({ newsInfo }) {
+interface NewsProps {
+  newsInfo: {
+    title: string;
+    image: string;
+    theme: string;
+    content: [];
+    video: string;
+  };
+}
+
+export default function News({ newsInfo }: NewsProps) {
   const { title, image, theme, content, video } = newsInfo;
 
   return (

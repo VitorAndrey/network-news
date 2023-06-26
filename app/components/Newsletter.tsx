@@ -2,7 +2,22 @@ import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import News from "./News";
 
-const Newsletter = ({ newsletter }) => {
+interface NewsletterProps {
+  newsletter: {
+    title: string;
+    Introduction: [];
+    footer: {
+      title: string;
+      content: [];
+    };
+    cover: {
+      image: string;
+    };
+    news: [];
+  };
+}
+
+const Newsletter = ({ newsletter }: NewsletterProps) => {
   const { title, Introduction, footer, cover, news } = newsletter;
 
   return (
@@ -20,8 +35,8 @@ const Newsletter = ({ newsletter }) => {
       <PortableText value={Introduction} />
 
       <section>
-        {news.map((news) => (
-          <News newsInfo={news} key={news.id} />
+        {news.map((news, index) => (
+          <News newsInfo={news} key={index} />
         ))}
       </section>
 
