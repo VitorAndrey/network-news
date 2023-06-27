@@ -1,3 +1,3 @@
 export default function loadingNewsletter() {
-  return <div>loading</div>;
+  return <p></p>;
 }
